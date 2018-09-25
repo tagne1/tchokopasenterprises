@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ChatServerLibrary.ChatService" CodeBehind="ChatService.svc.cs" %>

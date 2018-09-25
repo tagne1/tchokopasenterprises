@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys", "WingtipToys\WingtipToys.csproj", "{2C668095-50EA-41EA-8220-EAF2ADC85AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Tests", "WingtipToys.Tests\WingtipToys.Tests.csproj", "{EA281112-5430-4A3E-AAB4-876A204570C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C668095-50EA-41EA-8220-EAF2ADC85AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C668095-50EA-41EA-8220-EAF2ADC85AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C668095-50EA-41EA-8220-EAF2ADC85AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C668095-50EA-41EA-8220-EAF2ADC85AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA281112-5430-4A3E-AAB4-876A204570C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA281112-5430-4A3E-AAB4-876A204570C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA281112-5430-4A3E-AAB4-876A204570C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA281112-5430-4A3E-AAB4-876A204570C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCA9E1DE-7768-4348-B05E-E3ECAE5CB483}
+	EndGlobalSection
+EndGlobal
