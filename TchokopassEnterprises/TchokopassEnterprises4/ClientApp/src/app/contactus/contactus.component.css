@@ -1,0 +1,22 @@
+.col-md-8 {
+  background-color: lightgrey;
+ 
+  border: 15px solid black;
+  padding: 15px;
+  margin: 15px;
+}
+.phonenumber {
+  background-color: lightgrey;
+  border: 15px solid black;
+  padding: 15px;
+  margin: 15px;
+}
+
+div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+li a {
+  font-size: 16px;
+}

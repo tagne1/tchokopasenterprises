@@ -1,0 +1,19 @@
+p code {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: blue;
+}
+
+li a {
+  font-size: 16px;
+}
+
+/*
+img {
+  background-color: darkslateblue;
+}
+*/
+
+.card {
+  background-image: url("/Images/Background/light.JPG");
+}

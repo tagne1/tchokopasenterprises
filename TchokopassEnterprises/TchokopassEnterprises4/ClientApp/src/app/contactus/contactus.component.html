@@ -1,0 +1,103 @@
+<!--  Now that we have our HTML done, we need to bind the values of each input to a variable in Angular -->
+<br />
+
+<div class="container">
+  <!-- Phone and email -->
+  <div class="row">
+    <div class="col-md-3"> </div>
+    <div class="col-md-6 phonenumber">
+      <div class="PhoneEmail"></div>
+      <div class="row">
+        <p>&nbsp;&nbsp;Phone number: 713-305-8736&nbsp;:</p>
+        <p>&nbsp;We are on WhatsApp: (+1) 713 305 8736</p>
+        <p>&nbsp;&nbsp;Email: tchokopas.enterprises12@gmail.com</p>
+        <br />
+        <p>&nbsp;&nbsp;Address: 18418 Harlow Dr. Tomball, Tx 77377 - USA</p>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+  <!-- Contact form -->
+  <div class="row">
+    <div class="col-md-2"> </div>
+
+    <div class="col-md-8">
+      <div class="messages"></div>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" [ngClass]="{ 'has-error has-feedback' : hasError('name') }">
+              <label for="name">Name (First and Last name) :</label>
+              <br />
+              <input type="text" id="name" formControlName="name" required minlength="3" placeholder="Enter your name..." class="form-control">
+              <span *ngIf="hasError('name')" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+              <div *ngIf="hasError('name')" class="help-block alert alert-danger"> Name is a required field: please insert a valid name.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group" [ngClass]="{ 'has-error has-feedback' : hasError('phonenumber') }">
+              <label for="phonenumber">Phone number :</label>
+              <br />
+              <input type="text" id="phonenumber" formControlName="phonenumber" required placeholder="Enter your phone number..." class="form-control">
+              <span *ngIf="hasError('phonenumber')" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+              <div *ngIf="hasError('phonenumber')" class="help-blockcalert alert-danger"> phonenumber is a required field: please insert a valid phonenumber.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" [ngClass]="{ 'has-error has-feedback' : hasError('email') }">
+              <label for="email">Your email :</label>
+              <br />
+              <input type="email" id="email" formControlName="email" required placeholder="Enter your email..." class="form-control">
+              <span *ngIf="hasError('email')" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+              <div *ngIf="hasError('email')" class="help-block alert alert-danger"> Email is a required field: please insert a valid email.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group" [ngClass]="{ 'has-error has-feedback' : hasError('subject') }">
+              <label for="subject">Subject :</label>
+              <br />
+              <select type="text" id="subject" formControlName="subject" required placeholder="Choose or enter a subject..." class="form-control">
+                <option value=""></option>
+                <option value="General Information">General Information</option>
+                <option value="Request quotation">Request quotation</option>
+                <option value="Request order status">Request order status</option>
+                <option value="Request copy of an invoice">Request copy of an invoice</option>
+                <option value="Other">Other</option>
+              </select>
+              <span *ngIf="hasError('subject')" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+              <div *ngIf="hasError('subject')" class="help-block alert alert-danger"> Subject is a required field: please select a valid subject.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group" [ngClass]="{ 'has-error has-feedback' : hasError('message') }">
+              <label for="message">Message :</label>
+              <br />
+              <textarea type="text" id="message" formControlName="message" required placeholder="Enter your message..." rows="5" class="form-control"></textarea>
+              <span *ngIf="hasError('message')" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+              <div *ngIf="hasError('message')" class="help-block alert alert-danger">Message is a required field: please insert a valid message.</div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" name="btnSubmit" [disabled]="form.invalid" class="btn btn-dark btn-send"> Send message </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- {form.value | json }} -->
+    <br />
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<br />

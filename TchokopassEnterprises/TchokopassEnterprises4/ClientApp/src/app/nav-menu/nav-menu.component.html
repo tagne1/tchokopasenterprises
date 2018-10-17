@@ -1,0 +1,41 @@
+<!-- navbar.component.html -->
+
+<nav class="navbar fixed-top navbar-dark navbar-expand-xl">
+
+  <a class='navbar-brand' [routerLink]='["/"]'>Tchokopas Enterprises L.L.C</a>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()"> 
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': isExpanded }">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+        <a class="nav-link" [routerLink]='["/"]' (click)='collapse()'><b> Home </b> </a>
+      </li>
+      <li class="nav-item" [routerLinkActive]='["link-active"]'>
+        <a class="nav-link" [routerLink]='["/about"]' (click)='collapse()'> <b> About </b> </a>
+      </li>
+      <li class="nav-item" [routerLinkActive]='["link-active"]'>
+        <a class="nav-link" [routerLink]='["/investment"]' (click)='collapse()'> <b>  Investment </b> </a>
+      </li>
+      <li class="nav-item" [routerLinkActive]='["link-active"]'>
+        <a class="nav-link" [routerLink]='["/contactus"]' (click)='collapse()'> <b> Contact Us </b> </a>
+      </li>
+      
+      <!--
+    <li class="nav-item" [routerLinkActive]='["link-active"]'>
+      <a class="nav-link" [routerLink]='["/fetch-data"]' (click)='collapse()'> <b> Fetch data </b> </a>
+    </li>
+    -->
+    </ul>
+    <!--
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    -->
+  </div>
+
+</nav>
+
